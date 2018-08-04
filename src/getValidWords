@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+
+   public static List getValidWords(List <String> myList) 
+   {
+
+  List<String> myarray= new ArrayList<String>();
+  for( int i=0; i < myList.length; i++) {
+  	boolean check = isValid(myList[i]);
+  	if (check)
+      {
+       myarray.add(myList[i]);
+
+      }
+
+ return myarray;
+
+  }
+
+
+
+
