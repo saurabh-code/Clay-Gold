@@ -1,0 +1,43 @@
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class BFS {
+	
+	public static List<String> getPath(String start, String target) {
+		
+		Queue<String> wordQ= new LinkedList<>();
+		wordQ.add(start);
+		List<String> answer;
+		
+		while(wordQ.size()>0) {
+			String currWord = wordQ.peek();
+			if (currWord.equals(target)){
+				answer.add(target);
+			return answer;
+			}
+			wordQ.remove();
+			answer.add(currWord);
+			List<String> possibleWords = getAllPermutation(currWord);
+			List<String> validWords = getValidWords(possibleWords);
+			for (int i=0; i < validWords.size(); i++) {
+				wordQ.add(validWords.get(i));
+			}
+			
+		}
+		return answer;
+		
+		
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
