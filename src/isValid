@@ -1,0 +1,8 @@
+public static Boolean isValid (HashMap <String, Boolean> dictMap, String word) {
+        
+        if(dictMap.get(word)!=null && dictMap.get(word) != true) {
+            return true; 
+            
+        }
+        return false;
+    }
